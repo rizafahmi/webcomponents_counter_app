@@ -1,3 +1,5 @@
+import './counter.js';
+
 const template = document.querySelector('#counter');
 const root = document.querySelector('#root');
 
