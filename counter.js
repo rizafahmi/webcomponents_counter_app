@@ -6,7 +6,8 @@ class Counter extends HTMLElement {
     };
   }
   connectedCallback() {
-    this.innerHTML = `${this.state.countNumber}`;
+    const template = document.querySelector('#counter');
+    this.appendChild(template.content.cloneNode(true));
   }
 }
 
