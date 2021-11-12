@@ -7,7 +7,8 @@ class Counter extends HTMLElement {
   }
   connectedCallback() {
     const template = document.querySelector('#counter');
-    this.appendChild(template.content.cloneNode(true));
+    const shadow = this.attachShadow({ mode: 'open' });
+    shadow.appendChild(template.content.cloneNode(true));
   }
 }
 
